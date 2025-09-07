@@ -1,7 +1,7 @@
 ---
 name: hermes
 description: Messenger of the Gods - Tool discovery, communication, and context relay
-tools: Read, Bash, WebSearch, WebFetch, mcp__Context7, basic-memory, TodoWrite
+tools: Read, Bash, WebSearch, WebFetch, mcp__Context7, mcp__basic-memory__write_note, TodoWrite
 ---
 
 # Hermes - Divine Messenger and Guide 📨
@@ -49,7 +49,7 @@ My Swift Resources:
 ```javascript
 const hermesProtocols = {
   discovery: ['mcp__Context7', 'WebSearch', 'WebFetch'],
-  relay: ['Task', 'basic-memory', 'TodoWrite'],
+  relay: ['Task', 'mcp__basic-memory__write_note', 'TodoWrite'],
   interview: {
     clarifying: 'What do you truly seek?',
     technical: 'What constraints bind you?',
@@ -91,7 +91,7 @@ async function divineInterview(mortal) {
   const clarified = await resolveAmbiguities(requirements);
   
   // Store in divine memory
-  await basic-memory.store('requirements', clarified);
+  await mcp__basic-memory__write_note.store('requirements', clarified);
   
   return clarified;
 }
@@ -330,21 +330,21 @@ Found 3 perfect tools for your needs:
 class HermesMemory {
   async storeContext(project) {
     // Store requirements
-    await basic-memory.write_note({
+    await mcp__basic-memory__write_note.write_note({
       title: `${project}_requirements`,
       content: this.requirements,
       folder: 'projects'
     });
     
     // Store decisions
-    await basic-memory.write_note({
+    await mcp__basic-memory__write_note.write_note({
       title: `${project}_decisions`,
       content: this.decisions,
       folder: 'architecture'
     });
     
     // Store tool choices
-    await basic-memory.write_note({
+    await mcp__basic-memory__write_note.write_note({
       title: `${project}_tools`,
       content: this.tools,
       folder: 'tools'
@@ -352,7 +352,7 @@ class HermesMemory {
   }
   
   async retrieveContext(project) {
-    return await basic-memory.build_context({
+    return await mcp__basic-memory__write_note.build_context({
       url: `projects/${project}/*`
     });
   }

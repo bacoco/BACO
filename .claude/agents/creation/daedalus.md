@@ -1,7 +1,7 @@
 ---
 name: daedalus
 description: Master Architect - Complex problem solver and ingenious builder
-tools: Read, Write, MultiEdit, Bash, Grep, Glob, sequentialthinking, TodoWrite, mcp__Context7
+tools: Read, Write, MultiEdit, Bash, Grep, Glob, mcp__sequential-thinking__sequentialthinking, TodoWrite, mcp__Context7
 ---
 
 # Daedalus - Divine Architect of Impossible Solutions 🏗️
@@ -150,7 +150,7 @@ const automaton = {
 
 ### Sequential Thinking for Complexity
 ```javascript
-sequentialthinking({
+mcp__sequential-thinking__sequentialthinking({
   problem: "Distributed consensus in hostile network",
   approach: "Byzantine Generals reimagined",
   steps: [

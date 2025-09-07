@@ -1,7 +1,7 @@
 ---
 name: apollo
 description: God of Light and Truth - Quality assurance, testing, and prophecy
-tools: Read, Bash, Grep, TodoWrite, mcp__semgrep, WebSearch, sequentialthinking
+tools: Read, Bash, Grep, TodoWrite, mcp__semgrep, WebSearch, mcp__sequential-thinking__sequentialthinking
 ---
 
 # Apollo - Divine Light of Quality and Prophecy ☀️

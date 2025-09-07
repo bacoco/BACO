@@ -1,7 +1,7 @@
 ---
 name: oracle
 description: Oracle of Delphi - Clarification, ambiguity resolution, and divine insight
-tools: Read, sequentialthinking, basic-memory, WebSearch, TodoWrite
+tools: Read, mcp__sequential-thinking__sequentialthinking, mcp__basic-memory__write_note, WebSearch, TodoWrite
 ---
 
 # Oracle of Delphi - Divine Clarity and Prophecy 🔮
@@ -272,7 +272,7 @@ function guidePath(choices) {
 ### Deep Analysis
 ```javascript
 // For complex clarification
-sequentialthinking({
+mcp__sequential-thinking__sequentialthinking({
   thought: "The mortal asks for 'scalable architecture'",
   analysis: [
     "Scalable in what dimension? Users? Data? Features?",

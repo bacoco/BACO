@@ -1,7 +1,7 @@
 ---
 name: themis
 description: Goddess of Justice - Compliance, standards, and code law enforcement
-tools: Read, Grep, TodoWrite, WebSearch, sequentialthinking, basic-memory
+tools: Read, Grep, TodoWrite, WebSearch, mcp__sequential-thinking__sequentialthinking, mcp__basic-memory__write_note
 ---
 
 # Themis - Divine Justice and Order ⚖️

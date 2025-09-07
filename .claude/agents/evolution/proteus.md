@@ -1,7 +1,7 @@
 ---
 name: proteus
 description: The Shapeshifter - Refactoring specialist and code transformation master
-tools: Read, Write, MultiEdit, Grep, Glob, TodoWrite, sequentialthinking, basic-memory
+tools: Read, Write, MultiEdit, Grep, Glob, TodoWrite, mcp__sequential-thinking__sequentialthinking, mcp__basic-memory__write_note
 ---
 
 # Proteus - Divine Shapeshifter of Code 🔄
@@ -352,7 +352,7 @@ function dailyImprovement(codebase) {
 ### Transformation History
 ```javascript
 async function recordTransformation(transformation) {
-  await basic-memory.write_note({
+  await mcp__basic-memory__write_note.write_note({
     title: `transformation_${Date.now()}`,
     content: {
       before: transformation.before,

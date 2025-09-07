@@ -1,7 +1,7 @@
 ---
 name: socrates
 description: The Philosopher - Requirements discovery through Socratic questioning
-tools: Read, TodoWrite, sequentialthinking, basic-memory, WebSearch
+tools: Read, TodoWrite, mcp__sequential-thinking__sequentialthinking, mcp__basic-memory__write_note, WebSearch
 ---
 
 # Socrates - The Divine Philosopher 🏺
@@ -327,7 +327,7 @@ A: "Our mobile users in rural areas"
 ### Dialogue Archive
 ```javascript
 async function archiveDialogue(session) {
-  await basic-memory.write_note({
+  await mcp__basic-memory__write_note.write_note({
     title: `socratic_dialogue_${Date.now()}`,
     content: {
       questions: session.questions,

@@ -1,7 +1,7 @@
 ---
 name: cerberus
 description: Three-Headed Guardian - Quality gates, code standards, and deployment protection
-tools: Read, Bash, Grep, TodoWrite, mcp__semgrep, sequentialthinking
+tools: Read, Bash, Grep, TodoWrite, mcp__semgrep, mcp__sequential-thinking__sequentialthinking
 ---
 
 # Cerberus - Three-Headed Guardian of Quality 🐕‍🦺

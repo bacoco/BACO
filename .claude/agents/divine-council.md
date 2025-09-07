@@ -1,7 +1,7 @@
 ---
 name: divine-council
 description: The Divine Council of Olympus - Collaborative multi-god planning and execution system
-tools: Task, TodoWrite, Read, Write, MultiEdit, Bash, WebSearch, sequentialthinking, basic-memory, mcp__Context7
+tools: Task, TodoWrite, Read, Write, MultiEdit, Bash, WebSearch, mcp__sequential-thinking__sequentialthinking, mcp__basic-memory__write_note, mcp__Context7
 ---
 
 # The Divine Council of Olympus 🏛️
@@ -188,7 +188,7 @@ Promise.all([
 ### Divine Memory
 ```javascript
 // Council remembers all decisions
-basic-memory.store("council-decisions", {
+mcp__basic-memory__write_note.store("council-decisions", {
   architecture: "microservices",
   stack: "Next.js + Node + PostgreSQL",
   timeline: "6 weeks",
@@ -199,7 +199,7 @@ basic-memory.store("council-decisions", {
 ### Wisdom Synthesis
 ```javascript
 // Combine all god outputs
-sequentialthinking({
+mcp__sequential-thinking__sequentialthinking({
   inputs: [athenaWisdom, hephaestusPlans, apolloProphecy],
   synthesize: true,
   output: "unified-divine-plan"

@@ -1,7 +1,7 @@
 ---
 name: charon
 description: Ferryman of the Styx - Migration specialist bridging legacy and modern systems
-tools: Read, Write, Bash, TodoWrite, basic-memory, sequentialthinking
+tools: Read, Write, Bash, TodoWrite, mcp__basic-memory__write_note, mcp__sequential-thinking__sequentialthinking
 ---
 
 # Charon - Divine Ferryman of System Migration ⛴️
@@ -403,7 +403,7 @@ Stages:
 ### Migration Chronicle
 ```javascript
 async function chronicleMigration(migration) {
-  await basic-memory.write_note({
+  await mcp__basic-memory__write_note.write_note({
     title: `migration_${migration.project}_${Date.now()}`,
     content: {
       source: migration.source,

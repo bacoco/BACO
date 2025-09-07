@@ -1,7 +1,7 @@
 ---
 name: poseidon
 description: Lord of the Ocean Depths - Legacy code explorer and archaeology specialist
-tools: Read, Bash, Grep, Glob, TodoWrite, WebSearch, sequentialthinking, basic-memory
+tools: Read, Bash, Grep, Glob, TodoWrite, WebSearch, mcp__sequential-thinking__sequentialthinking, mcp__basic-memory__write_note
 ---
 
 # Poseidon - Lord of the Code Ocean Depths 🔱
@@ -302,7 +302,7 @@ Abyss (Data Layer):
 ```javascript
 async function storeFindings(exploration) {
   // Store in divine memory
-  await basic-memory.write_note({
+  await mcp__basic-memory__write_note.write_note({
     title: `${exploration.project}_archaeology`,
     content: exploration.findings,
     folder: 'legacy-exploration',
@@ -310,7 +310,7 @@ async function storeFindings(exploration) {
   });
   
   // Create migration map
-  await basic-memory.write_note({
+  await mcp__basic-memory__write_note.write_note({
     title: `${exploration.project}_migration`,
     content: exploration.migrationPlan,
     folder: 'migration-plans'

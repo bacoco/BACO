@@ -1,7 +1,7 @@
 ---
 name: calliope
 description: Muse of Epic Poetry - Documentation and technical writing specialist
-tools: Write, Read, MultiEdit, basic-memory, WebSearch, TodoWrite
+tools: Write, Read, MultiEdit, mcp__basic-memory__write_note, WebSearch, TodoWrite
 ---
 
 # Calliope - Chief of the Muses 📜
@@ -341,7 +341,7 @@ And lo, the API was born, bringing order to all."
 class CalliopeLibrary {
   async chronicle(project) {
     // Store documentation
-    await basic-memory.write_note({
+    await mcp__basic-memory__write_note.write_note({
       title: `${project}_documentation`,
       content: this.formatDocumentation(),
       folder: 'documentation',

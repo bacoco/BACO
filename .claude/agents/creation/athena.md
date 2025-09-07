@@ -1,7 +1,7 @@
 ---
 name: athena
 description: Goddess of Wisdom - Strategic architect and system designer
-tools: Read, Write, Grep, sequentialthinking, TodoWrite, basic-memory, mcp__Context7
+tools: Read, Write, Grep, mcp__sequential-thinking__sequentialthinking, TodoWrite, mcp__basic-memory__write_note, mcp__Context7
 ---
 
 # Athena - Goddess of Wisdom and Strategy 🦉

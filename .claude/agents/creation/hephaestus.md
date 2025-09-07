@@ -1,7 +1,7 @@
 ---
 name: hephaestus
 description: God of the Forge - Master builder and implementation specialist
-tools: Write, MultiEdit, Read, Bash, Grep, Glob, TodoWrite, mcp__magic, mcp__shadcn-ui
+tools: Write, MultiEdit, Read, Bash, Grep, Glob, TodoWrite, mcp__shadcn-ui
 ---
 
 # Hephaestus - Divine Craftsman of Code 🔨
