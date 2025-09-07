@@ -1,0 +1,144 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "name": "Auto-test after file changes",
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'if [ -f package.json ] && grep -q \"\\\"test\\\"\" package.json 2>/dev/null; then echo \"🧪 Running tests after file change...\"; npm test 2>/dev/null | tail -5 && echo \"✅ Test run complete\" || echo \"⚠️ Some tests may have failed\"; fi'"
+          }
+        ]
+      },
+      {
+        "name": "Track god activity",
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"⚡ Divine Task invoked at $(date +\"%H:%M:%S\")\" >> .pantheon/divine-activity.log 2>/dev/null || true'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "name": "Auto-commit if tests pass",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'if [ -f package.json ] && npm test 2>/dev/null | grep -q \"passing\\|PASS\"; then if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then git add -A 2>/dev/null && git commit -m \"✅ Auto-commit: Tests passing ($(date +%Y-%m-%d %H:%M))\" 2>/dev/null && echo \"📦 Changes committed automatically\" || echo \"ℹ️ Nothing to commit\"; fi; else echo \"⚠️ Skipping auto-commit (tests not passing or no test suite)\"; fi'"
+          }
+        ]
+      },
+      {
+        "name": "Generate session summary",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"\\n🏛️ PANTHEON Session Complete - $(date)\"; if [ -f .pantheon/divine-activity.log ]; then echo \"Divine activities logged in .pantheon/divine-activity.log\"; fi'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "name": "Protect critical files",
+        "matcher": "Edit|MultiEdit|Write|Delete",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import json, sys; data=json.load(sys.stdin); path=data.get('tool_input',{}).get('file_path',''); protected=['.env', '.env.local', 'secrets.json', '.git/']; sys.exit(2 if any(p in path for p in protected) else 0)\" 2>/dev/null || echo \"⚠️ Warning: Attempting to modify protected file\""
+          }
+        ]
+      },
+      {
+        "name": "Create .pantheon directory if needed",
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'mkdir -p .pantheon 2>/dev/null; exit 0'"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "name": "Log god completion",
+        "matcher": "zeus|athena|hephaestus|apollo|hermes|iris|daedalus|argus|themis|calliope|oracle|poseidon|proteus|charon",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"⚡ God $AGENT_NAME completed divine task at $(date +\"%H:%M:%S\")\" >> .pantheon/divine-activity.log 2>/dev/null || true'"
+          }
+        ]
+      },
+      {
+        "name": "Log divine council",
+        "matcher": "divine-council",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"🏛️ Divine Council session concluded at $(date +\"%H:%M:%S\")\" >> .pantheon/divine-activity.log 2>/dev/null || true'"
+          }
+        ]
+      },
+      {
+        "name": "Track Zeus mode usage",
+        "matcher": "zeus",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"⚡ Zeus orchestration completed (Mode: $ZEUS_MODE) at $(date +\"%H:%M:%S\")\" >> .pantheon/divine-activity.log 2>/dev/null || true'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "name": "Log important events",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"🔔 Event: $(date +\"%H:%M:%S\")\" >> .pantheon/notifications.log 2>/dev/null || true'"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "PANTHEON Automation Hooks - Enhanced Edition",
+    "created": "2025-01-07",
+    "author": "PANTHEON Team",
+    "features": [
+      "Automatic testing after file changes",
+      "Auto-commit when tests pass",
+      "Divine activity logging",
+      "Critical file protection",
+      "God completion tracking",
+      "Zeus mode tracking",
+      "Session summaries"
+    ],
+    "active_gods": [
+      "zeus",
+      "athena",
+      "hephaestus",
+      "apollo",
+      "hermes",
+      "iris",
+      "daedalus",
+      "argus",
+      "themis",
+      "calliope",
+      "oracle",
+      "poseidon",
+      "proteus",
+      "charon",
+      "divine-council"
+    ],
+    "notes": "Simplified and focused automation for PANTHEON Last"
+  }
+}

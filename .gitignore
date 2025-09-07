@@ -1,0 +1,29 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+.pantheon/*.log
+
+# Local settings
+.claude/settings.local.json
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
+.pantheon/divine-activity.log
+.pantheon/notifications.log
+
+# Dependencies (if any future ones are added)
+node_modules/
+__pycache__/
+*.pyc
